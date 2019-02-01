@@ -2,13 +2,26 @@
   "envName": "Prodution",
   "port": 443,
   "host": "https://domain",
+
   "saltRounds": 10,
   "jwt_max_age": 172800,
   "jwt_secret": "hihhU#&^#&%JrjnTJ*%B&&$%U@$%UCY*#($#*&%$&#%*#C(*#&C%#*)#$JCN*R",
+
   "db_connectionString": {
     "flex": "mongodb://localhost:27017/flexdb",
     "other": ""
   },
+
+  "ssl": {
+    "_comment": "Those files path are set according to server.js file and .ssl folder",
+    "privatekey": "./config/.fake_ssl/privatekey.pem",
+    "certificate": "./config/.fake_ssl/certificate.pem",
+    "fake": {
+      "privatekey": "./config/.ssl/privatekey.pem",
+      "certificate": "./config/.ssl/certificate.pem"
+    }
+  },
+
   "mailOption": {
     "account": {
       "user": "abc@xyz.com",

@@ -1,0 +1,31 @@
+{
+  "name": "flex-server-mongodb",
+  "version": "1.0.0",
+  "description": "A Node/Express/Mongodb server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:prod": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpit-absyadav/flex-server-mongodb.git"
+  },
+  "keywords": [
+    "Node Server",
+    "Express Server",
+    ""
+  ],
+  "author": "Arpit Yadav <arpit.absyadav@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arpit-absyadav/flex-server-mongodb/issues"
+  },
+  "homepage": "https://github.com/arpit-absyadav/flex-server-mongodb#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.8",
+    "morgan": "^1.9.1"
+  }
+}

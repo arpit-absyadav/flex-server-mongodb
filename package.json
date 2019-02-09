@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:prod": "NODE_ENV=production node server.js"
+    "start:prod": "NODE_ENV=production node server.js",
+    "test": "jest && npm run coverage",
+    "coverage": "xdg-open coverage/index.html"
   },
   "repository": {
     "type": "git",
@@ -34,5 +36,8 @@
     "nodemailer": "^5.1.1",
     "redis": "^2.8.0",
     "twilio": "^3.28.0"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
   }
 }

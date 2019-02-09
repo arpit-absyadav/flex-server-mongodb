@@ -1,12 +1,12 @@
 /*
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:48:39
- * @Last Modified by:   Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:48:39
+ * @Last Modified by: Arpit.Yadav
+ * @Last Modified time: 2019-02-09 21:55:28
  */
 var jwt = require('jsonwebtoken');
 var _ = require('lodash');
-var config = require('./../../../config/env/config');
+var config = require('./../../../../config/env/config');
 
 exports.create = details => {
   var maxAge = config.jwt_max_age;

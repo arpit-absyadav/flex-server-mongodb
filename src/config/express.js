@@ -1,8 +1,8 @@
 /*
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
- * @Last Modified by:   Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:51:15
+ * @Last Modified by: Arpit.Yadav
+ * @Last Modified time: 2019-02-09 21:49:18
  */
 var express = require('express');
 var morgan = require('morgan');
@@ -47,6 +47,7 @@ module.exports = function() {
   // ////////////////////////////////////////////////
   // ////////////////// App Routes///////////////////
   // ////////////////////////////////////////////////
+  require('./../app/modules/user/user.routes')(app);
 
   return app;
 };

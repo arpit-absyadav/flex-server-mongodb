@@ -1,8 +1,8 @@
 /*
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 17:55:16
- * @Last Modified by:   Arpit.Yadav
- * @Last Modified time: 2019-02-09 17:55:16
+ * @Last Modified by: Arpit.Yadav
+ * @Last Modified time: 2019-02-09 21:41:19
  */
 
 var mongoose = require('mongoose');
@@ -55,7 +55,7 @@ module.exports = function() {
   // });
 
   // Require database models here
-  require('./../../models');
+  require('./../../app/modules/user/user.model');
 
   return databaseConnection;
 };

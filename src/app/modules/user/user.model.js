@@ -2,15 +2,16 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 17:51:48
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:13:08
+ * @Last Modified time: 2019-02-09 21:48:03
  */
 
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const config = require('../../config/env/config');
+const config = require('../../../config/env/config');
 const handleMongooseError = require('./../../common/handlers/mongoose.error.handler');
 Schema = mongoose.Schema;
 const id = mongoose.Types.ObjectId();
+
 const UserSchema = new Schema({
   name: { type: String, required: true },
   email: {

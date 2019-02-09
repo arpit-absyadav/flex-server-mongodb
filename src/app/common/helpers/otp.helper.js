@@ -1,14 +1,16 @@
 /*
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:45:48
- * @Last Modified by:   Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:45:48
+ * @Last Modified by: Arpit.Yadav
+ * @Last Modified time: 2019-02-10 01:04:27
  */
 
 var btoa = require('btoa');
 var sms = require('../../../common/india_sms');
 var redis = require('redis'),
-  redisClient = redis.createClient();
+  redisClient = redis.createClient({
+    host: process.env.REDIS_HOST || '127.0.0.1'
+  });
 function generateDigits() {
   return Math.floor(Math.random() * 89999 + 10000);
 }

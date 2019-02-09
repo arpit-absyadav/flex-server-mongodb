@@ -1,17 +1,38 @@
-version: '2'
+version: '3'
 services:
+  redis:
+    image: redis:4.0.5-alpine
+    command: ['redis-server', '--appendonly', 'yes']
+    hostname: redis
+    networks:
+      - redis-net
+    volumes:
+      - redis-data:/data
+
   app:
     container_name: app
     restart: always
     build: .
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - REDIS_HOST=redis
     ports:
       - '3000:3000'
     links:
       - mongo
+    networks:
+      - redis-net
+    depends_on:
+      - redis
   mongo:
     container_name: mongo
     image: mongo
-    volumes:
-      - ./data:./data/db
     ports:
       - '27017:27017'
+
+networks:
+  redis-net:
+
+volumes:
+  redis-data:

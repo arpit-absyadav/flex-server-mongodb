@@ -1,8 +1,8 @@
 /*
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 18:00:33
- * @Last Modified by:   Arpit.Yadav
- * @Last Modified time: 2019-02-09 18:00:33
+ * @Last Modified by: Arpit.Yadav
+ * @Last Modified time: 2019-02-09 20:01:54
  */
 
 const nodemailer = require('nodemailer');

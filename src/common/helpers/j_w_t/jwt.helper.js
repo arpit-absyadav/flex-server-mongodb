@@ -1,3 +1,9 @@
+/*
+ * @Author: Arpit.Yadav
+ * @Date: 2019-02-09 20:48:39
+ * @Last Modified by:   Arpit.Yadav
+ * @Last Modified time: 2019-02-09 20:48:39
+ */
 var jwt = require('jsonwebtoken');
 var _ = require('lodash');
 var config = require('./../../../config/env/config');

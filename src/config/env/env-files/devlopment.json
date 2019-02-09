@@ -5,7 +5,7 @@
   "host": "http://localhost:3000",
   "saltRounds": 10,
   "jwt_max_age": 172800,
-  "jwt_secret": "hihhU#&^#&%JrjnTJ*%B&&$%U@$%UCY*#($#*&%$&#%*#C(*#&C%#*)#$JCN*R",
+  "jwt_secret": "hihhU#&(*#&C%#*)#$JCN*R",
 
   "db_connectionString": {
     "flex": "mongodb://localhost:27017/flexdb",

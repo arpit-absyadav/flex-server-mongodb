@@ -7,7 +7,9 @@
     "start": "node server.js",
     "start:prod": "NODE_ENV=production node server.js",
     "test": "jest && npm run coverage",
-    "coverage": "xdg-open coverage/index.html"
+    "coverage": "xdg-open coverage/index.html",
+    "docs:build": "documentation build src/** -f html -o docs",
+    "docs:open": "xdg-open docs/index.html"
   },
   "repository": {
     "type": "git",
@@ -25,11 +27,9 @@
   },
   "homepage": "https://github.com/arpit-absyadav/flex-server-mongodb#readme",
   "dependencies": {
-    "atob": "^2.1.2",
     "axios": "^0.18.0",
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.3",
-    "btoa": "^1.2.1",
     "express": "^4.16.4",
     "mongoose": "^5.4.8",
     "morgan": "^1.9.1",
@@ -38,6 +38,7 @@
     "twilio": "^3.28.0"
   },
   "devDependencies": {
+    "documentation": "^9.1.1",
     "jest": "^24.1.0"
   }
 }

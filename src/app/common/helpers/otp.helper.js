@@ -2,11 +2,11 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:45:48
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-10 01:04:27
+ * @Last Modified time: 2019-02-10 12:54:18
  */
 
 var btoa = require('btoa');
-var sms = require('../../../common/india_sms');
+var sms = require('./../message');
 var redis = require('redis'),
   redisClient = redis.createClient({
     host: process.env.REDIS_HOST || '127.0.0.1'

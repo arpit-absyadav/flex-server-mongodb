@@ -1,11 +1,11 @@
 /*
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:47:12
- * @Last Modified by:   Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:47:12
+ * @Last Modified by: Arpit.Yadav
+ * @Last Modified time: 2019-02-10 12:53:05
  */
 const Joi = require('joi');
-const errorParser = require('../../../common/helpers/errorParser/error.parser');
+const errorParser = require('../../common/helpers/errorParser/error.parser');
 // Setting up user schema.
 const userSchema = Joi.object().keys({
   name: Joi.string()

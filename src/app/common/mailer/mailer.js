@@ -2,13 +2,13 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 18:00:33
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:01:54
+ * @Last Modified time: 2019-02-10 12:55:01
  */
 
 const nodemailer = require('nodemailer');
 const orderTpl = require('./templates/order.tpl');
 const voucherTpl = require('./templates/voucher.tpl');
-const config = require('../config/env/config');
+const config = require('./../../../config/env/config');
 
 // Generate test SMTP service account from ethereal.email
 // Only needed if you don't have a real mail account for testing

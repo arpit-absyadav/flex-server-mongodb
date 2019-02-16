@@ -18,5 +18,18 @@
     },
     "from": "abc@xyz.com",
     "cc": "abc@xyz.com"
+  },
+  "aws": {
+    "awsConfig": {
+      "region": "ap-south-1",
+      "accessKeyId": "",
+      "secretAccessKey": ""
+    },
+    "bucketName": "3dclubhousev2",
+    "bucketPath": "https: //s3.ap-south-1.amazonaws.com/",
+    "folder": {
+      "users": "/users",
+      "admins": "/admins"
+    }
   }
 }

@@ -2,14 +2,14 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-09 21:49:18
+ * @Last Modified time: 2019-02-16 16:17:05
  */
 var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
-
+var responseHandler = require('./../app/common/handlers/response.handler');
 module.exports = function() {
-  var app = express();
+  const app = express();
   app.use(morgan('dev'));
 
   // this will set content-type to text/plain
@@ -19,8 +19,6 @@ module.exports = function() {
       extended: true
     })
   );
-  // using error middleware
-  // app.use(errorMiddleware)
 
   // ## CORS middleware
   //
@@ -40,6 +38,7 @@ module.exports = function() {
   };
   app.use(allowCrossDomain);
   app.use(bodyParser.json());
+  app.use(responseHandler);
 
   app.use(express.static('./app'));
   app.use(express.static('./config'));

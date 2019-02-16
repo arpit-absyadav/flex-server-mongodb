@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 17:55:16
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-09 21:41:19
+ * @Last Modified time: 2019-02-16 16:12:42
  */
 
 var mongoose = require('mongoose');
@@ -11,7 +11,7 @@ var config = require('./../env/config');
 module.exports = function() {
   var databaseConnection = mongoose.connect(
     config.db_connectionString.flex,
-    { useNewUrlParser: true },
+    { useNewUrlParser: true, useCreateIndex: true },
     function(err) {
       if (!err) {
         console.log(

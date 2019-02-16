@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:48:39
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-09 21:55:28
+ * @Last Modified time: 2019-02-16 16:07:03
  */
 var jwt = require('jsonwebtoken');
 var _ = require('lodash');
@@ -55,7 +55,7 @@ exports.verify = function(req, res, next) {
     jwt.verify(token[1], config.jwt_secret, function(err, decoded) {
       if (err) {
         // failed verification.
-        return res.error.Unauthorized('Unauthorized', {
+        res.error.Unauthorized('Unauthorized', {
           errors: {
             message:
               'Your token has been expired or missing. Please login again..'
@@ -66,7 +66,7 @@ exports.verify = function(req, res, next) {
       next(); // no error, proceed
     });
   } else {
-    return res.error.Unauthorized('Unauthorized', {
+    res.error.Unauthorized('Unauthorized', {
       errors: {
         message: 'Token Missing In Request, Please login or register..',
         info: 'Token needs to autherize to access requests.'

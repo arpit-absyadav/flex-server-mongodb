@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:45:35
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-09 21:55:41
+ * @Last Modified time: 2019-02-16 16:14:33
  */
 var atob = require('atob');
 var redis = require('redis');
@@ -16,6 +16,8 @@ var errorParser = require('../../common/helpers/errorParser/error.parser');
  *
  */
 exports.createUser = async (req, res, next) => {
+  console.log('reached to user');
+
   try {
     let [err, user] = await User.createUser(req.body);
 
@@ -44,4 +46,7 @@ exports.createUser = async (req, res, next) => {
     console.error('ERROR : ' + error);
     res.error.ServerError('Something went wrong. Please try again !!', error);
   }
+};
+exports.upload = function(req, res, next) {
+  console.log(req.files);
 };

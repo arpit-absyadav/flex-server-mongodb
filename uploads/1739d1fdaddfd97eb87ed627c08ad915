@@ -1,0 +1,38 @@
+"use strict";
+exports.__esModule = true;
+exports["default"] = {
+    envName: 'Development Environment',
+    port: 3000,
+    host: 'http://localhost:3000',
+    saltRounds: 10,
+    jwt_max_age: 172800,
+    jwt_secret: 'hihhU#&^#&%JrjnTJ*%B&&$%U@$%UCY*#($#*&%$&#%*#C(*#&C%#*)#$JCN*R',
+    db_connectionString: {
+        hydratorDB: 'mongodb://localhost:27017/hydrator'
+    },
+    mailOption: {
+        account: {
+            user: 'orders@gmail.com',
+            pass: 'order#3dch123'
+        },
+        from: 'orders@gmail.com',
+        cc: 'orders@gmail.com'
+    },
+    currentPincode: '110024',
+    // Keys belongs to abstech aws account
+    aws: {
+        awsConfig: {
+            region: 'ap-south-1',
+            accessKeyId: 'AKIAJ3FN35RFEOSIEFTA',
+            secretAccessKey: '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'
+        },
+        bucketName: 'abs-hydrator',
+        bucketPath: 'https://s3.ap-south-1.amazonaws.com/',
+        folder: {
+            vendors: '/vendors',
+            users: '/users',
+            admins: '/admins',
+            bottles: '/bottles'
+        }
+    }
+};

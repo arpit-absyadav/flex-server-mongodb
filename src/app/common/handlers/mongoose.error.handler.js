@@ -1,8 +1,8 @@
 /*
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:48:02
- * @Last Modified by:   Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:48:02
+ * @Last Modified by: Arpit.Yadav
+ * @Last Modified time: 2019-02-16 17:31:42
  */
 'use strict';
 
@@ -149,7 +149,7 @@ function beautify(error, collection, values, messages, defaultMessage) {
             message:
               typeof messages[path] === 'string'
                 ? messages[path]
-                : defaultMessage
+                : defaultMessage || ''
           };
 
           suberrors[path] = new mongoose.Error.ValidatorError(props);

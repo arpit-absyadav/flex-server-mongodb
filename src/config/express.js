@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-16 16:17:05
+ * @Last Modified time: 2019-02-16 16:30:04
  */
 var express = require('express');
 var morgan = require('morgan');
@@ -38,7 +38,7 @@ module.exports = function() {
   };
   app.use(allowCrossDomain);
   app.use(bodyParser.json());
-  app.use(responseHandler);
+  app.use(responseHandler());
 
   app.use(express.static('./app'));
   app.use(express.static('./config'));

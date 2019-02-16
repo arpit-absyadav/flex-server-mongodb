@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:45:35
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-16 16:14:33
+ * @Last Modified time: 2019-02-16 17:14:30
  */
 var atob = require('atob');
 var redis = require('redis');
@@ -34,13 +34,10 @@ exports.createUser = async (req, res, next) => {
       // removing data of first depth
       // this will prevent to show some properties in response data property
 
-      let error = {
-        errors: errorParser.parseMongooseError(err.errors)
-      };
-      res.error.UnprocessableEntity(err._message, error);
-    }
-    {
-      console.log(err.name);
+      res.error.UnprocessableEntity(
+        'validation Failed',
+        errorParser.parseMongooseError(err.errors)
+      );
     }
   } catch (error) {
     console.error('ERROR : ' + error);

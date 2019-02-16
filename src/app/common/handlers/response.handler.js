@@ -1,9 +1,3 @@
-/*
- * @Author: Arpit.Yadav
- * @Date: 2019-02-09 20:48:10
- * @Last Modified by:   Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:48:10
- */
 /**
  * This returns a custom response handler
  * which adds many default responses.
@@ -90,19 +84,19 @@ let createResponseType = function(
     // Set the toJSON function to return a clean object of the response
     this.toJSON = function() {
       return {
-        message:
-          {
-            type:
-              message == 'Validation failed' || message == 'ValidationError'
-                ? 'Validation Failed'
-                : message,
-            info: errors.message
-          } || '',
+        message: errors !== undefined ? errors.message : message,
+        // {
+        //   type:
+        //     message == 'Validation failed' || message == 'ValidationError'
+        //       ? 'Validation Failed'
+        //       : message,
+        //   info: errors.message
+        // } || '',
         data: data || {},
         name: name,
         status: status,
         code: code,
-        errors: errors || {}, // Return the stack only if isn't a production env.
+        error: errors || {}, // Return the stack only if isn't a production env.
         stack: debug ? stack : 0, // Return the query only if isn't a production env.
         query: debug ? this.query || 0 : 0,
         time: this.time || 0

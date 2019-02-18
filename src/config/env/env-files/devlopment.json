@@ -21,7 +21,7 @@
   },
   "aws": {
     "awsConfig": {
-      "region": "ap-south-1",
+      "region": "",
       "accessKeyId": "",
       "secretAccessKey": ""
     },

@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-16 16:30:04
+ * @Last Modified time: 2019-02-18 17:32:35
  */
 var express = require('express');
 var morgan = require('morgan');
@@ -47,6 +47,20 @@ module.exports = function() {
   // ////////////////// App Routes///////////////////
   // ////////////////////////////////////////////////
   require('./../app/modules/user/user.routes')(app);
+
+  // ////////////////////////////////////////////////
+  // ////////////////// App Default Error Handler///////////////////
+  // ////////////////////////////////////////////////
+  // 404
+  app.use(function(req, res, next) {
+    return res.error.NotFound('Requested Route [ ' + req.url + ' ] Not found.');
+  });
+
+  // 500 - Any server error
+  app.use(function(err, req, res, next) {
+    console.error(err);
+    return res.error.ServerError('Internal Server Error', err);
+  });
 
   return app;
 };

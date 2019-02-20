@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-20 18:13:55
+ * @Last Modified time: 2019-02-21 00:59:41
  */
 var express = require('express');
 var morgan = require('morgan');
@@ -48,6 +48,9 @@ module.exports = function() {
   // ////////////////// App Routes///////////////////
   // ////////////////////////////////////////////////
   require('./../app/modules/school/school.routes')(app);
+
+  // aboveroutes
+  // Note: Do not remove above line for cli purpose
 
   // ////////////////////////////////////////////////
   // ///////////App default error handler////////////

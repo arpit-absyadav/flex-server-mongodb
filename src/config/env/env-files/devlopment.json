@@ -25,7 +25,7 @@
       "accessKeyId": "",
       "secretAccessKey": ""
     },
-    "bucketName": "3dclubhousev2",
+    "bucketName": "aws-bucket name",
     "bucketPath": "https: //s3.ap-south-1.amazonaws.com/",
     "folder": {
       "users": "/users",

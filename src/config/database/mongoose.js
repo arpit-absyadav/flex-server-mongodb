@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 17:55:16
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-18 16:49:39
+ * @Last Modified time: 2019-02-20 18:13:25
  */
 
 var mongoose = require('mongoose');
@@ -55,7 +55,6 @@ module.exports = function() {
   // });
 
   // Require database models here
-  require('./../../app/modules/user/user.model');
   require('./../../app/modules/school/school.model');
 
   return databaseConnection;

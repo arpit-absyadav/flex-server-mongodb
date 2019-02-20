@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-18 17:39:03
+ * @Last Modified time: 2019-02-20 18:13:55
  */
 var express = require('express');
 var morgan = require('morgan');
@@ -47,8 +47,11 @@ module.exports = function() {
   // ////////////////////////////////////////////////
   // ////////////////// App Routes///////////////////
   // ////////////////////////////////////////////////
-  require('./../app/modules/user/user.routes')(app);
   require('./../app/modules/school/school.routes')(app);
+
+  // ////////////////////////////////////////////////
+  // ///////////App default error handler////////////
+  // ////////////////////////////////////////////////
 
   // 404
   app.use(function(req, res, next) {

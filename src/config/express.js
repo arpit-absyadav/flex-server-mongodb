@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-18 17:32:35
+ * @Last Modified time: 2019-02-18 17:39:03
  */
 var express = require('express');
 var morgan = require('morgan');
@@ -11,6 +11,7 @@ var responseHandler = require('./../app/common/handlers/response.handler');
 module.exports = function() {
   const app = express();
   app.use(morgan('dev'));
+  app.use(morgan(':req[content-type] -> :res[content-type]'));
 
   // this will set content-type to text/plain
   // comment to set contenct-type to application/json
@@ -47,10 +48,8 @@ module.exports = function() {
   // ////////////////// App Routes///////////////////
   // ////////////////////////////////////////////////
   require('./../app/modules/user/user.routes')(app);
+  require('./../app/modules/school/school.routes')(app);
 
-  // ////////////////////////////////////////////////
-  // ////////////////// App Default Error Handler///////////////////
-  // ////////////////////////////////////////////////
   // 404
   app.use(function(req, res, next) {
     return res.error.NotFound('Requested Route [ ' + req.url + ' ] Not found.');
@@ -61,6 +60,5 @@ module.exports = function() {
     console.error(err);
     return res.error.ServerError('Internal Server Error', err);
   });
-
   return app;
 };

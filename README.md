@@ -16,12 +16,12 @@ The flex server is intended to provide a simple and fun starting point for devel
 ### Client
 
 - Angular Client with this server compatibility
-  [Angular Client](https://github.com/arpit-absyadav/flex-angular)
+  [Angular Client](https://github.com/3dch/3dch-school-cleint)
 
 ### Installation
 
 ```
-git clone https://github.com/arpit-absyadav/flex-server-mongodb.git
+git clone https://github.com/3dch/3dch-school-server.git
 cd flex-server-mongodb
 npm install
 npm start (for development)
@@ -31,11 +31,12 @@ npm run start:prod (for https `production`)
 ### Docker based
 
 ```
-git clone https://github.com/arpit-absyadav/flex-server-mongodb.git
+git clone https://github.com/3dch/3dch-school-server.git
 cd flex-server-mongodb
 npm install
 docker-compose up -d
 ```
+
 ### Other commands
 
 ```bash

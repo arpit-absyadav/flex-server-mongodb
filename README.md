@@ -1,6 +1,8 @@
 ## Welcome to the Flex Server stack
 
-The flex server is intended to provide a simple and fun starting point for developeing javascript applications server.
+This is a backend server, powered by Node.js and Express, that focuses on rapid development. By rapid development I mean that with very little effort, developers should be able to start focusing on the features that really matter to them.
+
+
 
 - **M**ongoDB : Document database – used by your back-end application to store its data as JSON (JavaScript Object Notation) documents
 - **E**xpress (sometimes referred to as Express.js): Back-end web application framework running on top of Node.js

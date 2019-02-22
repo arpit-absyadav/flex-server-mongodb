@@ -6,10 +6,10 @@
  */
 const Joi = require('joi');
 const errorParser = require('../../common/helpers/errorParser/error.parser');
-const testSchema = require('./validators/registration.validator');
+const userSchema = require('./validators/registration.validator');
 const {
-  testLoginSchema,
-  getTestSchema
+  userLoginSchema,
+  getUserSchema
 } = require('./validators/other.validator');
 /**
  * @function : `this function will validate the registration request`
@@ -17,7 +17,7 @@ const {
  */
 exports.validate = async (req, res, next) => {
   console.log(req.body.phone);
-  Joi.validate(req.body, testSchema, err => {
+  Joi.validate(req.body, userSchema, err => {
     if (err === null) next();
     else res.error.BadRequest('BadRequest', errorParser.ValidationError(err));
   });
@@ -28,7 +28,7 @@ exports.validate = async (req, res, next) => {
  */
 exports.validateLogin = async (req, res, next) => {
   // console.log(req.body);
-  Joi.validate(req.body, testLoginSchema, err => {
+  Joi.validate(req.body, userLoginSchema, err => {
     if (err === null) next();
     else res.error.BadRequest('BadRequest', errorParser.ValidationError(err));
   });
@@ -38,9 +38,9 @@ exports.validateLogin = async (req, res, next) => {
  * @function : `this function will validate the login request` *
  * @param {req} // this parameter has the req parameters
  */
-exports.validateTestId = async (req, res, next) => {
+exports.validateUserId = async (req, res, next) => {
   console.log(req.params);
-  Joi.validate(req.params, getTestSchema, err => {
+  Joi.validate(req.params, getUserSchema, err => {
     if (err === null) next();
     else res.error.BadRequest('BadRequest', errorParser.ValidationError(err));
   });

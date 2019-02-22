@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 17:55:16
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-23 01:51:59
+ * @Last Modified time: 2019-02-23 01:55:51
  */
 
 var mongoose = require('mongoose');
@@ -57,7 +57,6 @@ module.exports = function() {
   // Require database models here
 
   require('./../../app/modules/user/user.model');
-require("./../../app/modules/test/test.model")
   // schemas
   // Note: Do not remove above line for cli purpose
   return databaseConnection;

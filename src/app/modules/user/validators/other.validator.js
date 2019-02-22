@@ -6,18 +6,18 @@
  */
 const Joi = require('joi');
 
-// Setting up test login schema.
-const testLoginSchema = Joi.object().keys({
+// Setting up user login schema.
+const userLoginSchema = Joi.object().keys({
   password: Joi.string().required(),
   email: Joi.string()
     .email({ minDomainAtoms: 2 })
     .required()
 });
-// Setting up get test data schema.
-const getTestSchema = Joi.object().keys({
+// Setting up get user data schema.
+const getUserSchema = Joi.object().keys({
   _id: Joi.string()
     .invalid('undefined', 'null')
     .required()
 });
 
-module.exports = { testLoginSchema, getTestSchema };
+module.exports = { userLoginSchema, getUserSchema };

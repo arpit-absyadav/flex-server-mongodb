@@ -5,18 +5,18 @@
  * @Last Modified time: 2019-02-21 18:02:33
  */
 
-const Test = require('mongoose').model('Test');
+const User = require('mongoose').model('User');
 const handleMongooseError = require('../../common/handlers/mongoose.error.handler');
 
 /**
- * @function : `Create  Test Fn`
+ * @function : `Create  User Fn`
  * @description : `Will return result as array`
  */
-exports.create = test => {
+exports.create = user => {
   try {
-    const _test = new Test(test);
+    const _user = new User(user);
     return new Promise((resolve, reject) => {
-      _test
+      _user
         .save()
         .then(result => {
           resolve([false, result]);
@@ -32,7 +32,7 @@ exports.create = test => {
 };
 
 /**
- * @function : `Get Test Fn`
+ * @function : `Get User Fn`
  * @description : `Will return result as array`
  *
  * @param { string } email : `will have email `
@@ -40,8 +40,8 @@ exports.create = test => {
 exports.findByEmail = email => {
   try {
     return new Promise((resolve, reject) => {
-      Test.findOne({ email: email, isActivated: true })
-        .then(_test => resolve([false, _test]))
+      User.findOne({ email: email, isActivated: true })
+        .then(_user => resolve([false, _user]))
         .catch(err => resolve([err, false]));
     });
   } catch (error) {
@@ -50,7 +50,7 @@ exports.findByEmail = email => {
 };
 
 /**
- * @function : `Find by id Test Fn`
+ * @function : `Find by id User Fn`
  * @description : `This will get the result matching with id.`
  *
  * @param { string } _id : _id is the unique id created by mongodb itself. Using this the data can be identfied.
@@ -59,8 +59,8 @@ exports.findByEmail = email => {
 exports.findBy_Id = _id => {
   try {
     return new Promise((resolve, reject) => {
-      Test.findOne({ _id: _id, isActivated: true })
-        .then(_test => resolve([false, _test]))
+      User.findOne({ _id: _id, isActivated: true })
+        .then(_user => resolve([false, _user]))
         .catch(err => resolve([err, false]));
     });
   } catch (error) {
@@ -69,7 +69,7 @@ exports.findBy_Id = _id => {
 };
 
 /**
- * @function : `Update Test Fn`
+ * @function : `Update User Fn`
  * @description : `This will update the document.`
  *
  * @param { string } _id : _id is the unique id created by mongodb itself. Using this the data can be identfied.
@@ -78,9 +78,9 @@ exports.findBy_Id = _id => {
 exports.update = (_id, data) => {
   try {
     return new Promise((resolve, reject) => {
-      Test.where({ _id: _id })
+      User.where({ _id: _id })
         .update({ $set: data })
-        .then(_test => resolve([false, _test]))
+        .then(_user => resolve([false, _user]))
         .catch(err => resolve([err, false]));
     });
   } catch (error) {

@@ -7,7 +7,7 @@
 const Joi = require('joi');
 
 // Setting up user schema.
-const testSchema = Joi.object().keys({
+const userSchema = Joi.object().keys({
   name: Joi.string()
     .min(3)
     .max(30)
@@ -31,4 +31,4 @@ const testSchema = Joi.object().keys({
     .required()
 });
 
-module.exports = testSchema;
+module.exports = userSchema;

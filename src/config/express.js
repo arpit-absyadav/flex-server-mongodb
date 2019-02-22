@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-23 01:52:06
+ * @Last Modified time: 2019-02-23 01:55:43
  */
 var express = require('express');
 var morgan = require('morgan');
@@ -49,7 +49,6 @@ module.exports = function() {
   // ////////////////////////////////////////////////
 
   require('./../app/modules/user/user.routes')(app);
-require("./../app/modules/test/test.routes")(app)
   // aboveroutes
   // Note: Do not remove above line for cli purpose
 

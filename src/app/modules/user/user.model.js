@@ -12,7 +12,7 @@ const handleMongooseError = require('../../common/handlers/mongoose.error.handle
 Schema = mongoose.Schema;
 const id = mongoose.Types.ObjectId();
 
-const testSchema = new Schema({
+const userSchema = new Schema({
   name: { type: String, required: true },
   email: {
     type: String,
@@ -35,7 +35,7 @@ const testSchema = new Schema({
 /**
  * Generate hash of password before saving
  */
-testSchema.pre('save', function(next) {
+userSchema.pre('save', function(next) {
   bcrypt.genSalt(config.saltRounds, (err, salt) => {
     bcrypt.hash(this.password, salt, (err, hash) => {
       if (!err) {
@@ -52,11 +52,11 @@ testSchema.pre('save', function(next) {
  * @param {String} inputPassword : `Password which has passed as input`
  * @return {} cb : `Will return the true and false`
  */
-testSchema.methods.comparePassword = function(inputPassword, cb) {
+userSchema.methods.comparePassword = function(inputPassword, cb) {
   bcrypt.compare(inputPassword, this.password, function(err, isMatch) {
     if (err) return cb(err);
     cb(null, isMatch);
   });
 };
-testSchema.plugin(handleMongooseError);
-mongoose.model('Test', testSchema);
+userSchema.plugin(handleMongooseError);
+mongoose.model('User', userSchema);

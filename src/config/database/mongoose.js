@@ -57,6 +57,7 @@ module.exports = function() {
   // Require database models here
 
   require('./../../app/modules/user/user.model');
+require("./../../app/modules/test/test.model")
   // schemas
   // Note: Do not remove above line for cli purpose
   return databaseConnection;

@@ -49,6 +49,7 @@ module.exports = function() {
   // ////////////////////////////////////////////////
 
   require('./../app/modules/user/user.routes')(app);
+require("./../app/modules/test/test.routes")(app)
   // aboveroutes
   // Note: Do not remove above line for cli purpose
 

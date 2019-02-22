@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:51:15
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-21 00:59:41
+ * @Last Modified time: 2019-02-22 23:44:06
  */
 var express = require('express');
 var morgan = require('morgan');
@@ -47,8 +47,8 @@ module.exports = function() {
   // ////////////////////////////////////////////////
   // ////////////////// App Routes///////////////////
   // ////////////////////////////////////////////////
-  require('./../app/modules/school/school.routes')(app);
 
+  require('./../app/modules/user/user.routes')(app);
   // aboveroutes
   // Note: Do not remove above line for cli purpose
 

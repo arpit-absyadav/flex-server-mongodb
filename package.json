@@ -1,5 +1,5 @@
 {
-  "name": "3DClubHouse School Server",
+  "name": "flex-server-mongodb",
   "version": "1.0.0",
   "description": "A Node/Express/Mongodb server",
   "main": "server.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/3dch/3dch-school-server.git"
+    "url": "git+https://github.com/arpit-absyadav/flex-server-mongodb.git"
   },
   "keywords": [
     "Node Server",
@@ -23,9 +23,9 @@
   "author": "Arpit Yadav <arpit.absyadav@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/3dch/3dch-school-server/issues"
+    "url": "https://github.com/arpit-absyadav/flex-server-mongodb/issues"
   },
-  "homepage": "https://github.com/3dch/3dch-school-server#readme",
+  "homepage": "https://github.com/arpit-absyadav/flex-server-mongodb#readme",
   "dependencies": {
     "aws-sdk": "^2.404.0",
     "axios": "^0.18.0",
@@ -38,7 +38,8 @@
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
     "nodemailer": "^5.1.1",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "twilio": "^3.28.0"
   },
   "devDependencies": {
     "documentation": "^9.1.1",

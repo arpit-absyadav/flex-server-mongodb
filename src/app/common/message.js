@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 18:00:42
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-09 20:39:50
+ * @Last Modified time: 2019-02-22 23:50:34
  */
 
 var express = require('express');
@@ -46,8 +46,8 @@ exports.SMS = function(mobile, text, callback) {
 };
 
 // Twilio
-var accountSid = 'AC85b25c77708580b6b177486bac08d1e'; // Your Account SID1 from www.twilio.com/console
-var authToken = 'db3dc3d6bed5db6a44898039063ebd7'; // Your Auth2 Token from www.twilio.com/console
+var accountSid = ''; // Your Account SID1 from www.twilio.com/console
+var authToken = ''; // Your Auth2 Token from www.twilio.com/console
 
 var twilio = require('twilio');
 var client = new twilio(accountSid, authToken);

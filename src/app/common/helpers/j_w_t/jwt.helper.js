@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:48:39
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-16 16:07:03
+ * @Last Modified time: 2019-02-23 00:33:53
  */
 var jwt = require('jsonwebtoken');
 var _ = require('lodash');
@@ -77,6 +77,9 @@ exports.verify = function(req, res, next) {
 /**
  * @param  {} token [pass token this function will return the data of user]
  */
-exports.decode = function(token) {
-  return jwt.decode(token);
+exports.decode = function(headers) {
+  let token = headers['authorization'].split(' ');
+  // console.log(token[1]);
+
+  return jwt.decode(token[1]);
 };

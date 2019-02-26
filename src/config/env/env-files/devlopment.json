@@ -11,10 +11,13 @@
     "flex": "mongodb://localhost:27017/flexdb",
     "other": ""
   },
-  "mailOption": {
-    "account": {
-      "user": "abc@xyz.com",
-      "pass": "******"
+  "mailConfig": {
+    "credentials": {
+      "service": "gmail",
+      "auth": {
+        "user": "abc@xyz.com",
+        "pass": ""
+      }
     },
     "from": "abc@xyz.com",
     "cc": "abc@xyz.com"

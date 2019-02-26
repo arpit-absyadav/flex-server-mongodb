@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-16 11:41:05
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-26 22:09:46
+ * @Last Modified time: 2019-02-26 22:10:52
  */
 
 const AWS = require('aws-sdk');
@@ -55,4 +55,4 @@ FileStreamService.prototype.stream = function(req, res, next) {
   });
 };
 
-exports.FileUploadService = FileUploadService;
+exports.FileStreamService = FileStreamService;

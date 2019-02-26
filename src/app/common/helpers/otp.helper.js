@@ -5,7 +5,7 @@
  * @Last Modified time: 2019-02-23 00:34:29
  */
 
-var sms = require('./../message');
+var sms = require('../sms/message');
 var redis = require('redis'),
   redisClient = redis.createClient({
     host: process.env.REDIS_HOST || '127.0.0.1'

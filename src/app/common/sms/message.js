@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 18:00:42
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-22 23:50:34
+ * @Last Modified time: 2019-02-21 15:08:43
  */
 
 var express = require('express');
@@ -20,10 +20,10 @@ exports.SMS = function(mobile, text, callback) {
   axios
     .get('https://app.indiasms.com/sendsms/sendsms.php', {
       params: {
-        username: '',
-        password: '',
+        username: '3dclub',
+        password: 'house12',
         type: 'TEXT',
-        sender: 'ABC',
+        sender: 'TEST',
         mobile: mobile,
         message: text
       }
@@ -44,23 +44,3 @@ exports.SMS = function(mobile, text, callback) {
 
   // callback('Did not send any request to indaiSMS')
 };
-
-// Twilio
-var accountSid = ''; // Your Account SID1 from www.twilio.com/console
-var authToken = ''; // Your Auth2 Token from www.twilio.com/console
-
-var twilio = require('twilio');
-var client = new twilio(accountSid, authToken);
-exports.sendMsg = () => {
-  client.messages
-    .create({
-      body: 'Hello from Node',
-      to: '+919999999999', // Text this number
-      from: '+12552911823' // From a valid Twilio number
-    })
-    .then(message => console.log(message));
-};
-
-// testing  twilio
-// const msg = require('./src/common/message');
-// msg.sendMsg();

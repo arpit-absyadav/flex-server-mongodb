@@ -2,7 +2,7 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-25 15:54:58
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-26 20:11:30
+ * @Last Modified time: 2019-02-27 17:50:18
  */
 exports.welcomeTpl = data => {
   return `<body itemscope itemtype="http://schema.org/EmailMessage" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6">

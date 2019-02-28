@@ -29,7 +29,7 @@
       "secretAccessKey": ""
     },
     "bucketName": "aws-bucket name",
-    "bucketPath": "https: //s3.ap-south-1.amazonaws.com/",
+    "bucketPath": "",
     "folder": {
       "users": "/users",
       "admins": "/admins"

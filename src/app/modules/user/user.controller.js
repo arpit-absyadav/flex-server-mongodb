@@ -2,15 +2,13 @@
  * @Author: Arpit.Yadav
  * @Date: 2019-02-09 20:45:35
  * @Last Modified by: Arpit.Yadav
- * @Last Modified time: 2019-02-22 14:39:58
+ * @Last Modified time: 2019-02-28 15:02:27
  */
-var atob = require('atob');
-var redis = require('redis');
-var redisClient = redis.createClient();
 
-var User = require('./user.service');
-var Jwt = require('../../common/helpers/j_w_t/jwt.helper');
-var errorParser = require('../../common/helpers/errorParser/error.parser');
+const User = require('./user.service');
+const Jwt = require('../../common/helpers/j_w_t/jwt.helper');
+const errorParser = require('../../common/helpers/errorParser/error.parser');
+const { sendMail, mailType } = require('../../common/mailer/mail.service');
 
 /**
  * Create User fn: `Creating user. `

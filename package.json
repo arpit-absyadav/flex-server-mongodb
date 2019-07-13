@@ -28,7 +28,7 @@
   "homepage": "https://github.com/arpit-absyadav/flex-server-mongodb#readme",
   "dependencies": {
     "aws-sdk": "^2.404.0",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "bcrypt": "^3.0.4",
     "body-parser": "^1.18.3",
     "bull": "^3.7.0",
@@ -38,12 +38,12 @@
     "mongoose": "^5.4.8",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
-    "nodemailer": "^5.1.1",
+    "nodemailer": "^6.2.1",
     "redis": "^2.8.0",
     "twilio": "^3.28.0"
   },
   "devDependencies": {
-    "documentation": "^9.1.1",
+    "documentation": "^12.0.1",
     "jest": "^24.1.0"
   }
 }
